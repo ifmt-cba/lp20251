@@ -7,6 +7,8 @@ https://github.com/ifmt-cba/lp20251
 
 # Salvando arquivos do projeto
 
+```shell
 git add *.py
 git commit -m "mensagem do que foi alterado"
 git push
+```
