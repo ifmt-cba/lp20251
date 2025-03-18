@@ -3,6 +3,8 @@ Exercícios sobre os comandos básicos em Python
 '''
 
 #1. Faça um programa que imprima o seu nome.
+def q01():
+    print('João Paulo')
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
 
