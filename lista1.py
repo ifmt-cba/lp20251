@@ -7,15 +7,31 @@ def q01():
     print('João Paulo')
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
+def q02():
+    print(30 * 27)
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
+def q03():
+    media = (5 + 8 + 12) / 3
+    print(media)
 
 #4. Faça um programa que leia e imprima um número inteiro.
+def q04():
+    numero = int(input('Digite um número inteiro: '))
+    print(numero)
 
 #5. Faça um programa que leia dois números reais e os imprima.
+def q05():
+    num1 = float(input('Digite o primeiro número real: '))
+    num2 = float(input('Digite o segundo número real: '))
+    print(num1,num2)
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
+def q06():
+    num = int(input('Digite um número inteiro: '))
+    print(f'Antecessor: {num-1}')
+    print(f'Sucessor: {num+1}')
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
