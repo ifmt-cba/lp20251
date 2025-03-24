@@ -35,10 +35,25 @@ def q06():
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+def q07():
+    nome = input('Nome: ')
+    endereco = input('Endereço: ')
+    telefone = input('Telefone: ')
+    texto = f'''
+        Nome: {nome}
+        Endereço: {endereco}
+        Telefone: {telefone}
+    '''
+    print(texto)
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+def q08():
+    num1 = int(input('Núm 1: '))
+    num2 = int(input('Núm 2: '))
+    print(f'{num1} - {num2} = {num1-num2}')
 
+q08()
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 
 #10. Faça um programa que leia três números reais e calcule a
