@@ -53,8 +53,8 @@ def q08():
     num2 = int(input('Núm 2: '))
     print(f'{num1} - {num2} = {num1-num2}')
 
-q08()
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
+
 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
@@ -64,6 +64,13 @@ q08()
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
+def q11():
+    num1 = float(input('Núm 1: '))
+    num2 = float(input('Núm 2: '))
+    print(f'{num1} + {num2} = {num1 + num2}')
+    print(f'{num1} - {num2} = {num1 - num2}')
+    print(f'{num1} * {num2} = {num1 * num2}')
+    print(f'{num1} / {num2} = {num1 / num2}')
 
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
