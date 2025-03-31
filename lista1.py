@@ -75,9 +75,15 @@ def q11():
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+def q12():
+    num = float(input('Número: '))
+    print(f'Quadrado de {num} = {num**2}')
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
+def q13():
+    saldo = float(input('Saldo: R$ '))
+    print(f'Saldo com ajuste de 2%: R$ {saldo*1.02}')
 
 #14. Faça um programa que leia a base e a altura de um retângulo
 #    e imprima o perímetro (base*2 + altura*2) e a área (base * altura).    
@@ -85,6 +91,17 @@ def q11():
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
 #    do produto subtraindo o desconto.
+def q15():
+    valor_produto = float(input('Valor do Produto: R$ '))
+    percentual_desconto = float(input('Percentual do Desconto: '))
+    valor_desconto = round(valor_produto * percentual_desconto/100, 2)
+    valor_produto_desconto = valor_produto - valor_desconto
+    resultado = f'''
+    Valor do Produto: R$ {valor_produto}
+    Valor do Desconto ({percentual_desconto}%): R$ {valor_desconto}
+    Valor final do Produto: R$ {valor_produto_desconto}
+    '''
+    print(resultado)
 
 #16. Faça um programa que calcule o reajuste do salário de um
 #    funcionário. Para isso, o programa deverá ler o salário atual
