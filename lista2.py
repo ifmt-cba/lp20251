@@ -2,7 +2,7 @@
 Exercícios sobre os comandos de condição em python
 '''
 
-def exemploSe():
+def exemplo_if_else():
     media = float(input('Média: '))
     if media >= 6:
         print('APROVADO')
@@ -12,7 +12,7 @@ def exemploSe():
         else:
             print('REPROVADO')
 
-def exemploSe_elif():
+def exemplo_if_elif_else():
     media = float(input('Média: '))
     if media >= 6:
         print('APROVADO')
