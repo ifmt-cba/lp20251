@@ -172,4 +172,5 @@ def q1():
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
 
-
+questao = int(input('Questão a executar: '))
+eval(f'q{questao}()')
