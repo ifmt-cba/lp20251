@@ -107,12 +107,25 @@ def q15():
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
 #    o valor do novo salário.
+def q16():
+    salario = float(input('Salário: '))
+    percentual_reajuste = float(input('Reajuste(%): '))
+    novo_salario = round(salario*percentual_reajuste/100 + salario,2)
+    texto = f'''
+    Salário de R$ {salario}
+    com reajuste de {percentual_reajuste}%
+    ficou em R$ {novo_salario}
+    '''
+    print(texto)
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 #    com base na fórmula a seguir. Após calcular o programa deve
 #    imprimir o resultado da conversão.
 #    F = (9 x C + 160) / 5
+def q17():
+    c = float(input('Graus Centígrados: '))
+    print(f'Fahrenheit: {(9 * c + 160) / 5}')
 
 #18. Faça um programa que calcule a quantidade de litros de combustível
 #    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -126,6 +139,18 @@ def q15():
 #    • L = Litros de combustível consumidos
 #    Ao final, o programa deverá imprimir a distância percorrida e a
 #    quantidade de litros consumidos na viagem.
+def q18():
+    tempo_viagem = int(input('Tempo da viagem (minutos): '))/60
+    velocidade_media = int(input('Velocidade Média (Km/h): '))
+    distancia = tempo_viagem * velocidade_media
+    litros_gastos = distancia / 12
+    texto = f'''
+    Duração da viagem: {int(tempo_viagem*60)} minutos ou {round(tempo_viagem,1)} horas
+    Velocidade Média: {velocidade_media} Km/h
+    Distância percorrida: {int(distancia)} kms
+    Litros Gastos: {round(litros_gastos,1)} litros
+    '''
+    print(texto)
 
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
@@ -133,7 +158,25 @@ def q15():
 #    programa deve imprimir o valor da prestação atrasada, o período
 #    de atraso, os juros que serão cobrados pelo período de atraso, o
 #    valor da prestação acrescido dos juros. Considere juros simples.
+def q19():
+    valor_prestacao = float(input('Valor da Prestação: R$ '))
+    taxa_juros = float(input('Taxa de Juros diária (%): '))
+    dias_atraso = int(input('Qtde de dias atrasado: '))
+    valor_multa = taxa_juros*dias_atraso*valor_prestacao
+    texto = f'''
+    Valor da Prestação: R$ {valor_prestacao}
+    Taxa de Juros diária: {taxa_juros}%
+    Qtde de dias de atraso: {dias_atraso} dias
+    Juros a serem cobrados: {taxa_juros*dias_atraso}% = R$ {valor_multa}
+    Valor final a pagar: R$ {valor_prestacao + valor_multa}
+    '''
+    print(texto)
 
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
+def q20():
+    qtde_dolares = float(input('Qtde de dólares: US$ '))
+    cambio_dolar = float(input('Câmbio do Dólar: R$ '))
+    print(f'Total em Reais: R$ {qtde_dolares*cambio_dolar}')
+    

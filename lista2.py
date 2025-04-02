@@ -43,6 +43,12 @@ def q1():
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q5():
+    num = int(input('Digite um número inteiro: '))
+    if num % 3 == 0 and num % 7 == 0:
+        print(f'{num} é divisível por 3 e 7')
+    else:
+        print(f'{num} não é divisível por 3 e 7')
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
