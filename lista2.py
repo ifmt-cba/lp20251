@@ -1,6 +1,9 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
+from datetime import date, datetime
+
+HOJE = datetime.now()
 
 def exemplo_if_else():
     media = float(input('Média: '))
@@ -64,6 +67,14 @@ def q5():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q9():
+    data_str = input('Data de Nascimento (dd/mm/aaaa): ')
+    data_nascimento = datetime.strptime(data_str, '%d/%m/%Y')
+
+    if (data_nascimento > HOJE):
+        print('Data inválida! Você nem nasceu ainda.')
+    else:
+        print(f'Idade: {(HOJE - data_nascimento).days/365} anos.')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
