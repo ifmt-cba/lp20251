@@ -74,11 +74,27 @@ def q9():
     if (data_nascimento > HOJE):
         print('Data inválida! Você nem nasceu ainda.')
     else:
-        print(f'Idade: {(HOJE - data_nascimento).days/365} anos.')
+        print(f'Idade: {int((HOJE - data_nascimento).days/365)} anos.')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+    a = int(input('Primeiro inteiro: '))
+    b = int(input('Segundo inteiro: '))
+    c = int(input('Terceiro inteiro: '))
 
+    if (a < b < c): # equivale a if (a < b and b < c)
+        print(f'{a} {b} {c}')
+    if (a < c < b):
+        print(f'{a} {c} {b}')
+    if (b < a < c):
+        print(f'{b} {a} {c}')
+    if (b < c < a):
+        print(f'{b} {c} {a}')
+    if (c < a < b):
+        print(f'{c} {a} {b}')
+    if (c < b < a):
+        print(f'{c} {b} {a}')
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
