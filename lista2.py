@@ -3,10 +3,10 @@ Exercícios sobre os comandos de condição em python
 '''
 from datetime import date, datetime
 # pip3 install deep-translator
-from deep_translator import GoogleTranslator
+# from deep_translator import GoogleTranslator
 
 HOJE = datetime.now()
-tradutor = GoogleTranslator(source='en', target='pt')
+#tradutor = GoogleTranslator(source='en', target='pt')
 
 def exemplo_if_else():
     media = float(input('Média: '))
@@ -167,8 +167,7 @@ def q18():
     else:
         data = datetime.strptime(f'01/{mes}/25', '%d/%m/%y')
         mes_extenso = data.strftime('%B')
-        print(tradutor.tanslate("Month: " + mes_extenso))
-
+        #print(tradutor.tanslate("Month: " + mes_extenso))
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
@@ -210,6 +209,50 @@ def q18():
 #Peixe          230cal Sorvete diet     110cal Suco de laranja   70cal
 #Frango         250cal Mousse diet      170cal Suco de melão     100cal
 #Carne          350cal Mousse chocolate 200cal Refrigerante diet 65cal
+def q23():
+    menu_prato_entrada = '''
+    [1] - Vegetariano (180 kcal)
+    [2] - Peixe (230 kcal)
+    [3] - Frango (250 kcal)
+    [4] - Carne (350 kcal)
+    Digite a opção de entrada[1-4]: 
+    '''
+    menu_bebida = '''
+    [1] - Chá (20 kcal)
+    [2] - Suco de Laranja (70 kcal)
+    [3] - Suco de Melão (100 kcal)
+    [4] - Refrigerante Diet (65 kcal)
+    Digite a opção da bebida[1-4]:
+    '''
+    menu_sobremesa = '''
+    [1] - Abacaxi (75 kcal)
+    [2] - Sorvete Diet (110 kcal)
+    [3] - Mousse Diet (170 kcal)
+    [4] - Mousse Chocolate (200 kcal)
+    Digite a opção de sobremesa[1-4]:
+    '''
+    prato_entrada = int(input(menu_prato_entrada))
+    bebida = int(input(menu_bebida))
+    sobremesa = int(input(menu_sobremesa))
+
+    cal = 0
+
+    cal += 180 if prato_entrada == 1 else 0;
+    cal += 230 if prato_entrada == 2 else 0;
+    cal += 250 if prato_entrada == 3 else 0;
+    cal += 350 if prato_entrada == 4 else 0;
+    cal += 20 if bebida == 1 else 0;
+    cal += 70 if bebida == 2 else 0;
+    cal += 100 if bebida == 3 else 0;
+    cal += 65 if bebida == 4 else 0;    
+    cal += 75 if sobremesa == 1 else 0;
+    cal += 110 if sobremesa == 2 else 0;
+    cal += 170 if sobremesa == 3 else 0;
+    cal += 200 if sobremesa == 4 else 0;
+
+    print(f'Total de calorias do pedido: {cal} kcal')
+
+
 
 #24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para
 #cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do
