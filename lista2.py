@@ -151,6 +151,53 @@ def q12():
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def q13():
+    def show_nota():
+        n1 = int(txt_nota1.get())
+        n2 = int(txt_nota2.get())
+        media = (n1+n2)/2
+        situacao = ''
+        if (media >= 7):
+            situacao = 'Aprovado'
+        elif (media >= 3):
+            situacao = 'Prova Final'
+        else:
+            situacao = 'Reprovado'
+        msg = f'Estudante: {txt_nome.get()}\nMédia: {media}\nSituação: {situacao}'
+        messagebox.showinfo(
+            title='Situação do Estudante!',
+            message=f'{msg}')
+        txt_nome.delete(0, len(txt_nome.get()))
+        txt_nota1.delete(0, len(txt_nota1.get()))
+        txt_nota2.delete(0, len(txt_nota2.get()))
+
+    window = Tk()
+    window.title('Questão 13')
+    window.config(padx=10, pady=10)
+
+    lbl_nome = Label(text='Nome:')
+    lbl_nome.grid(row=0, column=0)
+    global txt_nome
+    txt_nome = Entry(width=30)
+    txt_nome.grid(row=0, column=1, columnspan=2, sticky='W')
+    txt_nome.focus()
+
+    lbl_nota1 = Label(text='Nota 1:')
+    lbl_nota1.grid(row=1, column=0)
+    global txt_nota1
+    txt_nota1 = Entry(width=6)
+    txt_nota1.grid(row=1, column=1, columnspan=2, sticky='W')
+
+    lbl_nota2 = Label(text='Nota 2:')
+    lbl_nota2.grid(row=2, column=0)
+    global txt_nota2
+    txt_nota2 = Entry(width=6)
+    txt_nota2.grid(row=2, column=1, columnspan=2, sticky='W')
+
+    btn_ok = Button(text="Verificar Resultado", command=show_nota)
+    btn_ok.grid(row=4, column=0, columnspan=3, sticky='E')
+
+    window.mainloop()
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
