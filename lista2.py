@@ -170,31 +170,32 @@ def q13():
         txt_nome.delete(0, len(txt_nome.get()))
         txt_nota1.delete(0, len(txt_nota1.get()))
         txt_nota2.delete(0, len(txt_nota2.get()))
+        txt_nome.focus()
 
     window = Tk()
     window.title('Questão 13')
     window.config(padx=10, pady=10)
 
-    lbl_nome = Label(text='Nome:')
+    lbl_nome = Label(text='Nome:', font=("Arial", 16, "bold"))
     lbl_nome.grid(row=0, column=0)
     global txt_nome
-    txt_nome = Entry(width=30)
+    txt_nome = Entry(width=30, font=("Arial", 16, "normal"))
     txt_nome.grid(row=0, column=1, columnspan=2, sticky='W')
     txt_nome.focus()
 
-    lbl_nota1 = Label(text='Nota 1:')
+    lbl_nota1 = Label(text='Nota 1:', font=("Arial", 16, "bold"))
     lbl_nota1.grid(row=1, column=0)
     global txt_nota1
-    txt_nota1 = Entry(width=6)
+    txt_nota1 = Entry(width=6, font=("Arial", 16, "normal"))
     txt_nota1.grid(row=1, column=1, columnspan=2, sticky='W')
 
-    lbl_nota2 = Label(text='Nota 2:')
+    lbl_nota2 = Label(text='Nota 2:', font=("Arial", 16, "bold"))
     lbl_nota2.grid(row=2, column=0)
     global txt_nota2
-    txt_nota2 = Entry(width=6)
+    txt_nota2 = Entry(width=6, font=("Arial", 16, "normal"))
     txt_nota2.grid(row=2, column=1, columnspan=2, sticky='W')
 
-    btn_ok = Button(text="Verificar Resultado", command=show_nota)
+    btn_ok = Button(text="Verificar Resultado", bg="green", fg="white", font=("Arial", 16, "bold"), command=show_nota)
     btn_ok.grid(row=4, column=0, columnspan=3, sticky='E')
 
     window.mainloop()
