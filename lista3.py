@@ -41,16 +41,26 @@ def q3():
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
 def q4():
-    for x in range(20):
+    resultado = ''
+    for x in range(2):
         nome = input('Nome: ')
         sexo = input('Sexo: ').upper()[0]
         idade = int(input('Idade: '))
         if sexo == 'M' and idade >= 21:
-            print(f'{nome} é do sexo masculino e maior de 21.')
+            resultado += f'{nome}\n'
+    print('Relação de homens maiores de 21:\n')
+    print(resultado)
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
+def q5():
+    n1 = int(input('Valor 1: '))
+    n2 = int(input('Valor 2: '))
+    resultado = 0
+    for _ in range(n1):
+        resultado+=n2
+    print(resultado)
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
