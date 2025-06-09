@@ -176,11 +176,14 @@ def q12():
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
 def q13():
-    consumo_geral = 0
-    consumo_tipo_1_2 = 0
-    qtd_tipo_1_2 = 0
+    # Variáveis necessárias
+    consumo_geral = 0       # para calcular o consumo de kwh geral
+    consumo_tipo_1_2 = 0    # para calcular o consumo médio dos tipos 1 e 2
+    qtd_tipo_1_2 = 0        # para calcular o consumo médio dos tipos 1 e 2
     while True:
-        custo = 0
+        custo = 0 # para calcular o custo de consumo individual
+
+        # Entrada de dados
         numero = input_int('Número do Consumidor: ',0,9_999_999)
         if numero == 0:
             break
