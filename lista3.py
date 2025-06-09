@@ -1,3 +1,4 @@
+from biblioteca import input_int, input_float
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
@@ -45,7 +46,7 @@ def q4():
     for x in range(2):
         nome = input('Nome: ')
         sexo = input('Sexo: ').upper()[0]
-        idade = int(input('Idade: '))
+        idade = input_int('Idade: ',0,120)
         if sexo == 'M' and idade >= 21:
             resultado += f'{nome}\n'
     print('Relação de homens maiores de 21:\n')
@@ -88,7 +89,7 @@ def q7():
     media_geral = 0
     for _ in range(3):
         nome = input('Nome: ')
-        n1 = float(input('Nota1: '))
+        n1 = input_float('Nota1: ',0,10)
         n2 = float(input('Nota2: '))
         media = round((n1+n2)/2,1)
         media_geral += media
@@ -150,8 +151,8 @@ def q11():
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
 def q12():
-    populacaoA = 5000000
-    populacaoB = 7000000
+    populacaoA = 5_000_000
+    populacaoB = 7_000_000
     anos = 0
     while populacaoA < populacaoB:
         anos+=1
@@ -174,6 +175,35 @@ def q12():
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
+def q13():
+    consumo_geral = 0
+    consumo_tipo_1_2 = 0
+    qtd_tipo_1_2 = 0
+    while True:
+        custo = 0
+        numero = input_int('Número do Consumidor: ',0,9_999_999)
+        if numero == 0:
+            break
+        qtd_kw = input_int('Qtde de Kwh: ',0,9_999_999)        
+        tipo = input_int('Tipo do Consumidor: ', 1,3)
+
+        #Calculando o consumo geral
+        consumo_geral += qtd_kw
+
+        #Calculando o custo do consumo individual
+        custo += qtd_kw * 0.3 if tipo == 1 else 0;
+        custo += qtd_kw * 0.5 if tipo == 2 else 0;
+        custo += qtd_kw * 0.7 if tipo == 3 else 0;
+
+        #Calculando a média de consumo dos consumidores tipo 1 e 2
+        consumo_tipo_1_2 += qtd_kw if tipo == 1 else 0;
+        consumo_tipo_1_2 += qtd_kw if tipo == 2 else 0;
+        qtd_tipo_1_2 += 1 if tipo == 1 else 0;
+        qtd_tipo_1_2 += 1 if tipo == 2 else 0; 
+
+        print(f'Custo total do consumidor: R$ {custo}')
+    print(f'Consumo Geral: {consumo_geral} kwh')
+    print(f'Média de consumo Tipo 1 e 2: {consumo_tipo_1_2/qtd_tipo_1_2} kwh')
 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
