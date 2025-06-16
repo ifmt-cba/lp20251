@@ -23,6 +23,14 @@ def q1():
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
 #numerada.
+def q2():
+    letras = []
+    for _ in range(10):
+        letras.append(chr(random.randrange(65,91)))
+    cont = 1
+    for c in letras:
+        print(f'{cont}: {c}')
+        cont+=1
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
