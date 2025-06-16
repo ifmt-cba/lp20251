@@ -1,4 +1,5 @@
 import random
+from biblioteca import input_int
 '''
 Lista de Exercícios referentes a coleções e arquivos em python
 '''
@@ -11,8 +12,8 @@ def q1():
     lista = []
     for _ in range(15):
         lista.append(random.randrange(100))
-    print(lista, end=' ')
-    numero = int(input('Digite um número a ser buscado: '))
+    print(lista)
+    numero = int(input_int('Digite um número a ser buscado: ',0,100))
     try:
         posicao = lista.index(numero)
     except ValueError:
@@ -31,6 +32,13 @@ def q2():
     for c in letras:
         print(f'{cont}: {c}')
         cont+=1
+
+#2.1 Faça um programa que peça ao usuário para informar a qtde de caracteres
+# para a geração de uma senha aleatória. Ao final o programa deve exibir a
+# senha sugerida. (ASCII 40-126)
+def q21():
+    qtde = input_int('Qtde de caracteres para a senha: ',8,20)
+    senha = ''
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
