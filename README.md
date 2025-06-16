@@ -12,3 +12,4 @@ git add *.py
 git commit -m "mensagem do que foi alterado"
 git push
 ```
+
