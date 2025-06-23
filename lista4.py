@@ -56,11 +56,11 @@ def q21():
 #Utilize quantas listas forem necessárias para armazenar os dados.
 def q5():
     diario = []
-    contchar = 65
+    contchar = 65 # Código ASCII da letra A
     for _ in range(15):
         aluno = dict()
         aluno['nome'] = chr(contchar)
-        contchar += 1
+        contchar += 1 # Avançar para a próxima letra para representar o nome do próximo aluno
         aluno['n1'] = random.randrange(0,11)
         aluno['n2'] = random.randrange(0,11)
         aluno['media'] = round((aluno['n1'] + aluno['n2'])/2,1)
