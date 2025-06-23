@@ -23,7 +23,7 @@ def q1():
         
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
-#numerada.
+#numerada. (ASCII 65-90)
 def q2():
     letras = []
     for _ in range(10):
@@ -39,6 +39,9 @@ def q2():
 def q21():
     qtde = input_int('Qtde de caracteres para a senha: ',8,20)
     senha = ''
+    for _ in range(qtde):
+        senha+=chr(random.randrange(40,127))
+    print(f'Senha sugerida: {senha}')
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
@@ -51,6 +54,25 @@ def q21():
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
+def q5():
+    diario = []
+    contchar = 65
+    for _ in range(15):
+        aluno = dict()
+        aluno['nome'] = chr(contchar)
+        contchar += 1
+        aluno['n1'] = random.randrange(0,11)
+        aluno['n2'] = random.randrange(0,11)
+        aluno['media'] = round((aluno['n1'] + aluno['n2'])/2,1)
+        aluno['situacao'] = 'AP' if aluno['media']>=6 else 'RP'
+        diario.append(aluno)
+    
+    resultado = 'NOME\tN1\tN2\tMEDIA\tSITUACAO\n'
+    for a in diario:
+        resultado += f'{a["nome"]}\t{a["n1"]}\t{a["n2"]}\t{a["media"]}\t{a["situacao"]}\n'
+    print(resultado)
+
+
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
