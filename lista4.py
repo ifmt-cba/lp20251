@@ -45,6 +45,17 @@ def q21():
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
+def q3():
+    arquivo = open('questao3.csv','r')
+    for linha in arquivo:
+        numeros = linha.split(';')
+        resultado = ''
+        for numero in numeros:
+            resultado+=f'{numero}\t{"PAR" if int(numero)%2==0 else "IMPAR"}\n'
+        arquivo_saida = open('questao3.out','w')
+        arquivo_saida.write(resultado)
+    arquivo.close()
+    arquivo_saida.close()
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
@@ -71,8 +82,6 @@ def q5():
     for a in diario:
         resultado += f'{a["nome"]}\t{a["n1"]}\t{a["n2"]}\t{a["media"]}\t{a["situacao"]}\n'
     print(resultado)
-
-
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
